@@ -10,7 +10,6 @@ br/ufscar/dc/compiladores/questParser$AlternativasContext.class
 br/ufscar/dc/compiladores/questParser.class
 br/ufscar/dc/compiladores/questParser$AlternativaContext.class
 br/ufscar/dc/compiladores/questParser$PerguntasContext.class
-br/ufscar/dc/compiladores/App.class
 br/ufscar/dc/compiladores/questListener.class
 br/ufscar/dc/compiladores/questParser$ProgramaContext.class
 br/ufscar/dc/compiladores/questParser$Declaracoes_alternativasContext.class

@@ -18,8 +18,9 @@ public class questParser extends Parser {
 		new PredictionContextCache();
 	public static final int
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9, 
-		T__9=10, T__10=11, PALAVRA_CHAVE=12, IDENT=13, CADEIA=14, NUM_INT=15, 
-		NUM_REAL=16, DELIM=17, VIRGULA=18, CADEIA_ERR=19, ERRO=20;
+		T__9=10, T__10=11, T__11=12, PALAVRA_CHAVE=13, IDENT=14, DELIM=15, VIRGULA=16, 
+		CADEIA=17, NUM_INT=18, NUM_REAL=19, WS=20, CADEIA_ERR=21, COMENTARIO_ERR=22, 
+		ERRO=23;
 	public static final int
 		RULE_programa = 0, RULE_declaracoes = 1, RULE_decl = 2, RULE_tipo = 3, 
 		RULE_perguntas = 4, RULE_declaracoes_perguntas = 5, RULE_decl_perguntas = 6, 
@@ -35,17 +36,17 @@ public class questParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'inicio_form'", "'fim_form'", "'titulo'", "'descricao'", "'autor'", 
-			"'inicio_pergunta'", "'fim_pergunta'", "'pergunta'", "'resposta'", "'\\n'", 
-			"'alternativas'", null, null, null, null, null, "':'", "','"
+			null, "'inicio_form'", "'fim_form'", "': '", "'titulo'", "'descricao'", 
+			"'autor'", "'inicio_pergunta'", "'fim_pergunta'", "'pergunta'", "'resposta'", 
+			"'\\n'", "'alternativas'", null, null, "':'", "','"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
 			null, null, null, null, null, null, null, null, null, null, null, null, 
-			"PALAVRA_CHAVE", "IDENT", "CADEIA", "NUM_INT", "NUM_REAL", "DELIM", "VIRGULA", 
-			"CADEIA_ERR", "ERRO"
+			null, "PALAVRA_CHAVE", "IDENT", "DELIM", "VIRGULA", "CADEIA", "NUM_INT", 
+			"NUM_REAL", "WS", "CADEIA_ERR", "COMENTARIO_ERR", "ERRO"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -181,7 +182,7 @@ public class questParser extends Parser {
 			setState(31);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__3) | (1L << T__4))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__3) | (1L << T__4) | (1L << T__5))) != 0)) {
 				{
 				{
 				setState(28);
@@ -209,7 +210,6 @@ public class questParser extends Parser {
 		public TipoContext tipo() {
 			return getRuleContext(TipoContext.class,0);
 		}
-		public TerminalNode DELIM() { return getToken(questParser.DELIM, 0); }
 		public TerminalNode CADEIA() { return getToken(questParser.CADEIA, 0); }
 		public DeclContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -234,7 +234,7 @@ public class questParser extends Parser {
 			setState(34);
 			tipo();
 			setState(35);
-			match(DELIM);
+			match(T__2);
 			setState(36);
 			match(CADEIA);
 			}
@@ -274,7 +274,7 @@ public class questParser extends Parser {
 			{
 			setState(38);
 			_la = _input.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__3) | (1L << T__4))) != 0)) ) {
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__3) | (1L << T__4) | (1L << T__5))) != 0)) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -320,11 +320,11 @@ public class questParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(40);
-			match(T__5);
+			match(T__6);
 			setState(41);
 			declaracoes_perguntas();
 			setState(42);
-			match(T__6);
+			match(T__7);
 			}
 		}
 		catch (RecognitionException re) {
@@ -369,7 +369,7 @@ public class questParser extends Parser {
 			setState(47);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__7) | (1L << T__8) | (1L << T__10))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__8) | (1L << T__9) | (1L << T__11))) != 0)) {
 				{
 				{
 				setState(44);
@@ -463,25 +463,25 @@ public class questParser extends Parser {
 			setState(57);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
-			case T__7:
+			case T__8:
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(54);
-				match(T__7);
+				match(T__8);
 				}
 				break;
-			case T__10:
+			case T__11:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(55);
 				declaracoes_alternativas();
 				}
 				break;
-			case T__8:
+			case T__9:
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(56);
-				match(T__8);
+				match(T__9);
 				}
 				break;
 			default:
@@ -587,7 +587,7 @@ public class questParser extends Parser {
 				_la = _input.LA(1);
 			}
 			setState(69);
-			match(T__9);
+			match(T__10);
 			}
 		}
 		catch (RecognitionException re) {
@@ -627,7 +627,7 @@ public class questParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(71);
-			match(T__10);
+			match(T__11);
 			setState(72);
 			match(DELIM);
 			setState(73);
@@ -646,7 +646,7 @@ public class questParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001\u0014L\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
+		"\u0004\u0001\u0017L\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
 		"\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004\u0002"+
 		"\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007\u0002"+
 		"\b\u0007\b\u0002\t\u0007\t\u0002\n\u0007\n\u0001\u0000\u0001\u0000\u0001"+
@@ -658,7 +658,7 @@ public class questParser extends Parser {
 		"\u0001\u0007\u0003\u0007:\b\u0007\u0001\b\u0001\b\u0001\t\u0001\t\u0001"+
 		"\t\u0005\tA\b\t\n\t\f\tD\t\t\u0001\t\u0001\t\u0001\n\u0001\n\u0001\n\u0001"+
 		"\n\u0001\n\u0000\u0000\u000b\u0000\u0002\u0004\u0006\b\n\f\u000e\u0010"+
-		"\u0012\u0014\u0000\u0001\u0001\u0000\u0003\u0005E\u0000\u0016\u0001\u0000"+
+		"\u0012\u0014\u0000\u0001\u0001\u0000\u0004\u0006E\u0000\u0016\u0001\u0000"+
 		"\u0000\u0000\u0002\u001f\u0001\u0000\u0000\u0000\u0004\"\u0001\u0000\u0000"+
 		"\u0000\u0006&\u0001\u0000\u0000\u0000\b(\u0001\u0000\u0000\u0000\n/\u0001"+
 		"\u0000\u0000\u0000\f2\u0001\u0000\u0000\u0000\u000e9\u0001\u0000\u0000"+
@@ -669,24 +669,23 @@ public class questParser extends Parser {
 		"\u0000\u0000\u0000\u001c\u001e\u0003\u0004\u0002\u0000\u001d\u001c\u0001"+
 		"\u0000\u0000\u0000\u001e!\u0001\u0000\u0000\u0000\u001f\u001d\u0001\u0000"+
 		"\u0000\u0000\u001f \u0001\u0000\u0000\u0000 \u0003\u0001\u0000\u0000\u0000"+
-		"!\u001f\u0001\u0000\u0000\u0000\"#\u0003\u0006\u0003\u0000#$\u0005\u0011"+
-		"\u0000\u0000$%\u0005\u000e\u0000\u0000%\u0005\u0001\u0000\u0000\u0000"+
-		"&\'\u0007\u0000\u0000\u0000\'\u0007\u0001\u0000\u0000\u0000()\u0005\u0006"+
-		"\u0000\u0000)*\u0003\n\u0005\u0000*+\u0005\u0007\u0000\u0000+\t\u0001"+
-		"\u0000\u0000\u0000,.\u0003\f\u0006\u0000-,\u0001\u0000\u0000\u0000.1\u0001"+
-		"\u0000\u0000\u0000/-\u0001\u0000\u0000\u0000/0\u0001\u0000\u0000\u0000"+
-		"0\u000b\u0001\u0000\u0000\u00001/\u0001\u0000\u0000\u000023\u0003\u000e"+
-		"\u0007\u000034\u0005\u0011\u0000\u000045\u0005\u000e\u0000\u00005\r\u0001"+
-		"\u0000\u0000\u00006:\u0005\b\u0000\u00007:\u0003\u0014\n\u00008:\u0005"+
-		"\t\u0000\u000096\u0001\u0000\u0000\u000097\u0001\u0000\u0000\u000098\u0001"+
-		"\u0000\u0000\u0000:\u000f\u0001\u0000\u0000\u0000;<\u0005\u000e\u0000"+
-		"\u0000<\u0011\u0001\u0000\u0000\u0000=B\u0003\u0010\b\u0000>?\u0005\u0012"+
-		"\u0000\u0000?A\u0003\u0010\b\u0000@>\u0001\u0000\u0000\u0000AD\u0001\u0000"+
-		"\u0000\u0000B@\u0001\u0000\u0000\u0000BC\u0001\u0000\u0000\u0000CE\u0001"+
-		"\u0000\u0000\u0000DB\u0001\u0000\u0000\u0000EF\u0005\n\u0000\u0000F\u0013"+
-		"\u0001\u0000\u0000\u0000GH\u0005\u000b\u0000\u0000HI\u0005\u0011\u0000"+
-		"\u0000IJ\u0003\u0012\t\u0000J\u0015\u0001\u0000\u0000\u0000\u0004\u001f"+
-		"/9B";
+		"!\u001f\u0001\u0000\u0000\u0000\"#\u0003\u0006\u0003\u0000#$\u0005\u0003"+
+		"\u0000\u0000$%\u0005\u0011\u0000\u0000%\u0005\u0001\u0000\u0000\u0000"+
+		"&\'\u0007\u0000\u0000\u0000\'\u0007\u0001\u0000\u0000\u0000()\u0005\u0007"+
+		"\u0000\u0000)*\u0003\n\u0005\u0000*+\u0005\b\u0000\u0000+\t\u0001\u0000"+
+		"\u0000\u0000,.\u0003\f\u0006\u0000-,\u0001\u0000\u0000\u0000.1\u0001\u0000"+
+		"\u0000\u0000/-\u0001\u0000\u0000\u0000/0\u0001\u0000\u0000\u00000\u000b"+
+		"\u0001\u0000\u0000\u00001/\u0001\u0000\u0000\u000023\u0003\u000e\u0007"+
+		"\u000034\u0005\u000f\u0000\u000045\u0005\u0011\u0000\u00005\r\u0001\u0000"+
+		"\u0000\u00006:\u0005\t\u0000\u00007:\u0003\u0014\n\u00008:\u0005\n\u0000"+
+		"\u000096\u0001\u0000\u0000\u000097\u0001\u0000\u0000\u000098\u0001\u0000"+
+		"\u0000\u0000:\u000f\u0001\u0000\u0000\u0000;<\u0005\u0011\u0000\u0000"+
+		"<\u0011\u0001\u0000\u0000\u0000=B\u0003\u0010\b\u0000>?\u0005\u0010\u0000"+
+		"\u0000?A\u0003\u0010\b\u0000@>\u0001\u0000\u0000\u0000AD\u0001\u0000\u0000"+
+		"\u0000B@\u0001\u0000\u0000\u0000BC\u0001\u0000\u0000\u0000CE\u0001\u0000"+
+		"\u0000\u0000DB\u0001\u0000\u0000\u0000EF\u0005\u000b\u0000\u0000F\u0013"+
+		"\u0001\u0000\u0000\u0000GH\u0005\f\u0000\u0000HI\u0005\u000f\u0000\u0000"+
+		"IJ\u0003\u0012\t\u0000J\u0015\u0001\u0000\u0000\u0000\u0004\u001f/9B";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

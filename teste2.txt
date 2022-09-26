@@ -1,0 +1,17 @@
+titulo: "O título"
+descricao: "A descrição"
+autor: "Vozes na minha cabeça"
+
+inicio_form
+	inicio_pergunta		
+		pergunta: "pergunta"
+		alternativas: "a", "b", "c"
+		resposta: "aa"
+	fim_pergunta
+	
+	inicio_pergunta
+		pergunta: "pergunta"
+		alternativas: "a", "b", "c"
+		resposta: "aa"
+	fim_pergunta
+fim_form
