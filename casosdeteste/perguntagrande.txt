@@ -5,10 +5,7 @@ inicio_declaracoes
 fim_declaracoes
 
 inicio_form
-<<<<<<<< HEAD:casosdeteste/perguntagrande.txt
-========
 	{ resposta não contida nas alternativas }
->>>>>>>> 30725c60c58fb61d5657d66d35ca6f1183fcabd8:casosdeteste/teste2.txt
 	inicio_pergunta
 		tipo: multiplaescolha		
 		pergunta: "Minha pergunta"
@@ -16,20 +13,13 @@ inicio_form
 		resposta: "alternativa c"
 	fim_pergunta
 
-<<<<<<<< HEAD:casosdeteste/perguntagrande.txt
-========
 	{ o tipo não existe }
->>>>>>>> 30725c60c58fb61d5657d66d35ca6f1183fcabd8:casosdeteste/teste2.txt
 	inicio_pergunta
 		tipo: verdadeirofalso
 		pergunta: "Minha pergunta"
 		resposta: falso
 	fim_pergunta
-<<<<<<<< HEAD:casosdeteste/perguntagrande.txt
 
-========
-	
->>>>>>>> 30725c60c58fb61d5657d66d35ca6f1183fcabd8:casosdeteste/teste2.txt
 	{ a pergunta deve conter no máximo 300 caracteres }
 	inicio_pergunta
 		tipo: dissertativa
