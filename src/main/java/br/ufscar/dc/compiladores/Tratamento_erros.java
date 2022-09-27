@@ -35,7 +35,6 @@ public class Tratamento_erros implements ANTLRErrorListener {
     @Override
     public void syntaxError(Recognizer<?, ?> recognizer, Object offendingSymbol, int line, int charPositionInLine, String msg, RecognitionException e) {
         Token t = (Token) offendingSymbol;
-        System.out.println("to aqui");
 
         if(t.getType() == 27)
         {
@@ -63,7 +62,7 @@ public class Tratamento_erros implements ANTLRErrorListener {
             outputFile.close();
             exit(0);
         }    
-                        
+
         else if (t.getType() != Token.EOF) {
             outputFile.append("Linha " + t.getLine() + ": ");
             outputFile.append("Erro sintático próximo à " + t.getText()  +"\n");
@@ -71,11 +70,8 @@ public class Tratamento_erros implements ANTLRErrorListener {
             outputFile.close();
             exit(0);
         } 
-
         
         outputFile.println("Fim da compilacao");
-        
-        //outputFile.close();
-        //exit(0);
+
     }
 }
