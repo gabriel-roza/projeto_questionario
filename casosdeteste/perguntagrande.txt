@@ -23,8 +23,6 @@ inicio_form
 	{ a pergunta deve conter no máximo 300 caracteres }
 	inicio_pergunta
 		tipo: dissertativa
-		pergunta: "Perguntas são enunciados em que se pede ao interlocutor uma informação.Na pragmática, perguntas são enquadradas como um tipo de ato de fala
- 			     diretamente realizado por orações interrogativas (por exemplo, "Como você se chama?") e indiretamente realizado por orações imperativas
-			    ("Me diga o seu nome") ou declarativas ("Desculpe, não sei o seu nome").Podem ser divididas em diversos tipos e subtipos."
+		pergunta: "Perguntas são enunciados em que se pede ao interlocutor uma informação.Na pragmática, perguntas são enquadradas como um tipo de ato de fala diretamente realizado por orações interrogativas por exemplo, Como você se chama? e indiretamente realizado por orações imperativas Me diga o seu nome ou declarativas Desculpe, não sei o seu nome.Podem ser divididas em diversos tipos e subtipos. Não sei o que mais colocar."
 	fim_pergunta
 fim_form

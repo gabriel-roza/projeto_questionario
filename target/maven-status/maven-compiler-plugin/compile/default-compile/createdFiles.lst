@@ -14,10 +14,7 @@ br/ufscar/dc/compiladores/questParser$RespostaContext.class
 br/ufscar/dc/compiladores/App.class
 br/ufscar/dc/compiladores/questListener.class
 br/ufscar/dc/compiladores/questParser$ProgramaContext.class
-br/ufscar/dc/compiladores/questLexer.interp
 br/ufscar/dc/compiladores/Semantico.class
-br/ufscar/dc/compiladores/quest.interp
-quest.tokens
 br/ufscar/dc/compiladores/questParser$MultiplaescolhaContext.class
 br/ufscar/dc/compiladores/questParser$VerdadeirofalsoContext.class
 br/ufscar/dc/compiladores/questParser$TipoContext.class
@@ -29,4 +26,3 @@ br/ufscar/dc/compiladores/questParser.class
 br/ufscar/dc/compiladores/TabelaDeSimbolos.class
 br/ufscar/dc/compiladores/questParser$PerguntasContext.class
 br/ufscar/dc/compiladores/questParser$DescricaoContext.class
-questLexer.tokens

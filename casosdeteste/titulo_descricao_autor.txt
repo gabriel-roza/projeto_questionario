@@ -1,0 +1,26 @@
+inicio_declaracoes
+	{ título descrição e autor são campos obrigatórios }
+	titulo: ""
+	descricao: ""
+	autor: ""
+fim_declaracoes
+
+inicio_form
+	inicio_pergunta
+		tipo: multiplaescolha		
+		pergunta: "Essa é uma pergunta?"
+		alternativas: "sim", "não", "talvez"
+		resposta: "sim"
+	fim_pergunta
+
+	inicio_pergunta
+		tipo: verdadeirofalso
+		pergunta: "pergunta"
+		resposta: falso
+	fim_pergunta
+
+	inicio_pergunta
+		tipo: dissertativa
+		pergunta: "Essa questão possui menos que 300 caracteres e está correta. Porém, cabe ao autor do formulário verificar a corretude da resposta."
+	fim_pergunta
+fim_form
