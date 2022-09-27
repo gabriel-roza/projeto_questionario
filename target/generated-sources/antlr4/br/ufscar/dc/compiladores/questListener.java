@@ -78,6 +78,16 @@ public interface questListener extends ParseTreeListener {
 	 */
 	void exitDissertativa(questParser.DissertativaContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link questParser#verdadeirofalso}.
+	 * @param ctx the parse tree
+	 */
+	void enterVerdadeirofalso(questParser.VerdadeirofalsoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link questParser#verdadeirofalso}.
+	 * @param ctx the parse tree
+	 */
+	void exitVerdadeirofalso(questParser.VerdadeirofalsoContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link questParser#titulo}.
 	 * @param ctx the parse tree
 	 */
@@ -117,6 +127,16 @@ public interface questListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitAlternativa(questParser.AlternativaContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link questParser#alternativacorreta}.
+	 * @param ctx the parse tree
+	 */
+	void enterAlternativacorreta(questParser.AlternativacorretaContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link questParser#alternativacorreta}.
+	 * @param ctx the parse tree
+	 */
+	void exitAlternativacorreta(questParser.AlternativacorretaContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link questParser#pergunta}.
 	 * @param ctx the parse tree

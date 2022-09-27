@@ -38,14 +38,40 @@ public class Tratamento_erros implements ANTLRErrorListener {
     public void syntaxError(Recognizer<?, ?> recognizer, Object offendingSymbol, int line, int charPositionInLine, String msg, RecognitionException e) {
         Token t = (Token) offendingSymbol;
         
-        if (t.getType() != Token.EOF) {
-            outputFile.println("Linha " + t.getLine() + ": erro sintatico proximo a " + t.getText());
-        } else {
-            outputFile.println("Linha " + t.getLine() + ": erro sintatico proximo a EOF");
+        if(t.getType() == 24)
+        {
+            outputFile.append("Linha " + t.getLine() + ": ");
+            outputFile.append("cadeia literal nao fechada\n");
+            outputFile.append("Fim da compilacao\n");
+            outputFile.close();
+            exit(0);
         }
+
+        else if(t.getType() == 25)
+        {
+            outputFile.append("Linha " + t.getLine() + ": ");
+            outputFile.append("comentario nao fechado\n");
+            outputFile.append("Fim da compilacao\n");
+            outputFile.close();
+            exit(0);
+        }
+
+        else if(t.getType() == 26)
+        {
+            outputFile.append("Linha " + t.getLine() + ": ");
+            outputFile.append(t.getText() + " - simbolo nao identificado\n");
+            outputFile.append("Fim da compilacao\n");
+            outputFile.close();
+            exit(0);
+        }                    
+        else if (t.getType() != Token.EOF) {
+            outputFile.append("Erro sintático próximo à " + t.getText()  +"\n");
+        } 
+
+        
         outputFile.println("Fim da compilacao");
         
-        outputFile.close();
-        exit(0);
+        //outputFile.close();
+        //exit(0);
     }
 }

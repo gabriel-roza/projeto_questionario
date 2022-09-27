@@ -100,6 +100,18 @@ public class questBaseListener implements questListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterVerdadeirofalso(questParser.VerdadeirofalsoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitVerdadeirofalso(questParser.VerdadeirofalsoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterTitulo(questParser.TituloContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -143,6 +155,18 @@ public class questBaseListener implements questListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitAlternativa(questParser.AlternativaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAlternativacorreta(questParser.AlternativacorretaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAlternativacorreta(questParser.AlternativacorretaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

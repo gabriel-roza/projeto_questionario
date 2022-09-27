@@ -53,6 +53,12 @@ public interface questVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitDissertativa(questParser.DissertativaContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link questParser#verdadeirofalso}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitVerdadeirofalso(questParser.VerdadeirofalsoContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link questParser#titulo}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -76,6 +82,12 @@ public interface questVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitAlternativa(questParser.AlternativaContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link questParser#alternativacorreta}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAlternativacorreta(questParser.AlternativacorretaContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link questParser#pergunta}.
 	 * @param ctx the parse tree
