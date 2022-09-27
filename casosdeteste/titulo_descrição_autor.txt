@@ -1,5 +1,8 @@
 inicio_declaracoes
+<<<<<<<< HEAD:casosdeteste/titulo_descrição_autor.txt
 	{ título descrição e autor são campos obrigatórios }
+========
+>>>>>>>> 30725c60c58fb61d5657d66d35ca6f1183fcabd8:casosdeteste/teste3.txt
 	titulo: ""
 	descricao: ""
 	autor: ""

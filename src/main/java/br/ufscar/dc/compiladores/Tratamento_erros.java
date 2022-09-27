@@ -1,7 +1,5 @@
 package br.ufscar.dc.compiladores;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import static java.lang.System.exit;
@@ -37,8 +35,8 @@ public class Tratamento_erros implements ANTLRErrorListener {
     @Override
     public void syntaxError(Recognizer<?, ?> recognizer, Object offendingSymbol, int line, int charPositionInLine, String msg, RecognitionException e) {
         Token t = (Token) offendingSymbol;
-        
-        if(t.getType() == 24)
+
+        if(t.getType() == 27)
         {
             outputFile.append("Linha " + t.getLine() + ": ");
             outputFile.append("cadeia literal nao fechada\n");
@@ -47,7 +45,7 @@ public class Tratamento_erros implements ANTLRErrorListener {
             exit(0);
         }
 
-        else if(t.getType() == 25)
+        else if(t.getType() == 28)
         {
             outputFile.append("Linha " + t.getLine() + ": ");
             outputFile.append("comentario nao fechado\n");
@@ -56,22 +54,24 @@ public class Tratamento_erros implements ANTLRErrorListener {
             exit(0);
         }
 
-        else if(t.getType() == 26)
+        else if(t.getType() == 29)
         {
             outputFile.append("Linha " + t.getLine() + ": ");
             outputFile.append(t.getText() + " - simbolo nao identificado\n");
             outputFile.append("Fim da compilacao\n");
             outputFile.close();
             exit(0);
-        }                    
-        else if (t.getType() != Token.EOF) {
-            outputFile.append("Erro sintático próximo à " + t.getText()  +"\n");
-        } 
+        }    
 
+        else if (t.getType() != Token.EOF) {
+            outputFile.append("Linha " + t.getLine() + ": ");
+            outputFile.append("Erro sintático próximo à " + t.getText()  +"\n");
+            outputFile.append("Fim da compilacao\n");
+            outputFile.close();
+            exit(0);
+        } 
         
         outputFile.println("Fim da compilacao");
-        
-        //outputFile.close();
-        //exit(0);
+
     }
 }

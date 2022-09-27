@@ -20,7 +20,8 @@ public class questParser extends Parser {
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9, 
 		T__9=10, T__10=11, T__11=12, T__12=13, T__13=14, T__14=15, T__15=16, T__16=17, 
 		T__17=18, PALAVRA_CHAVE=19, IDENT=20, DELIM=21, VIRGULA=22, CADEIA=23, 
-		NUM_INT=24, NUM_REAL=25, WS=26, CADEIA_ERR=27, COMENTARIO_ERR=28, ERRO=29;
+		NUM_INT=24, NUM_REAL=25, COMENTARIO=26, WS=27, CADEIA_ERR=28, COMENTARIO_ERR=29, 
+		ERRO=30;
 	public static final int
 		RULE_programa = 0, RULE_declaracoes = 1, RULE_perguntas = 2, RULE_declaracoes_perguntas = 3, 
 		RULE_tipo = 4, RULE_multiplaescolha = 5, RULE_dissertativa = 6, RULE_verdadeirofalso = 7, 
@@ -49,8 +50,8 @@ public class questParser extends Parser {
 		return new String[] {
 			null, null, null, null, null, null, null, null, null, null, null, null, 
 			null, null, null, null, null, null, null, "PALAVRA_CHAVE", "IDENT", "DELIM", 
-			"VIRGULA", "CADEIA", "NUM_INT", "NUM_REAL", "WS", "CADEIA_ERR", "COMENTARIO_ERR", 
-			"ERRO"
+			"VIRGULA", "CADEIA", "NUM_INT", "NUM_REAL", "COMENTARIO", "WS", "CADEIA_ERR", 
+			"COMENTARIO_ERR", "ERRO"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -982,7 +983,7 @@ public class questParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001\u001ds\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
+		"\u0004\u0001\u001es\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
 		"\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004\u0002"+
 		"\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007\u0002"+
 		"\b\u0007\b\u0002\t\u0007\t\u0002\n\u0007\n\u0002\u000b\u0007\u000b\u0002"+
