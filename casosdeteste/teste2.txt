@@ -5,7 +5,7 @@ inicio_declaracoes
 fim_declaracoes
 
 inicio_form
-	/resposta não contida nas alternativas*/
+	{ resposta não contida nas alternativas }
 	inicio_pergunta
 		tipo: multiplaescolha		
 		pergunta: "Essa é uma pergunta?"
@@ -13,14 +13,15 @@ inicio_form
 		resposta: "talvez"
 	fim_pergunta
 
-	/o tipo não existe*/
+	{ o tipo não existe }
 	inicio_pergunta
 		tipo: assinalar
 		pergunta: "Esse tipo existe?"
 		alternativas: "sim", "não"
 		resposta: "não"
 	fim_pergunta
-	/a pergunta deve conter no máximo 300 caracteres*/
+	
+	{ a pergunta deve conter no máximo 300 caracteres }
 	inicio_pergunta
 		tipo: dissertativa
 		pergunta: "Perguntas são enunciados em que se pede ao interlocutor uma informação.Na pragmática, perguntas são enquadradas como um tipo de ato de fala

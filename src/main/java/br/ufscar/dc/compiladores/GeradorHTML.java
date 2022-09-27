@@ -1,24 +1,10 @@
 
 package br.ufscar.dc.compiladores;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
-import java.util.ArrayList;
-import java.util.List;
-
 import br.ufscar.dc.compiladores.questParser.DeclaracoesContext;
 import br.ufscar.dc.compiladores.questParser.DissertativaContext;
 import br.ufscar.dc.compiladores.questParser.MultiplaescolhaContext;
-import br.ufscar.dc.compiladores.questParser.PerguntaContext;
-import br.ufscar.dc.compiladores.questParser.PerguntasContext;
 import br.ufscar.dc.compiladores.questParser.ProgramaContext;
-import br.ufscar.dc.compiladores.questParser.TituloContext;
 import br.ufscar.dc.compiladores.questParser.VerdadeirofalsoContext;
 
 public class GeradorHTML extends questBaseVisitor<Void>{
@@ -110,8 +96,11 @@ public class GeradorHTML extends questBaseVisitor<Void>{
         +"</head>\n"
         +"<body>\n"
         +"<h1>\n"
-        +titulo+ " - " +autor
+        +titulo 
         +"</h1>\n"
+        +"<h5>\n"
+        +"Feito por: "+autor
+        +"</h5>"
         +"<p id='id_description'>\n"
         +descricao
         +"</p>\n\n");

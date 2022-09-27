@@ -16,17 +16,15 @@ NUM_REAL: ('0'..'9')+ ('.' ('0'..'9')+)?
 ;
 
 fragment
-COMENTARIO: '/' .? '*/' -> skip
+ESC_SEQ	: '\\\''
 ;
-WS  :   ( ' '
-        | '\t'
-        | '\r'
-        | '\n'
-        ) {skip();}
+COMENTARIO : '{' ~('\n'|'\r'|'}')* '}' {skip();}
+;
+WS : ( ' ' | '\t' | '\r' | '\n') {skip();}
 ;
 CADEIA_ERR: '"' ~('"'|'\n')* '\n'
 ;
-COMENTARIO_ERR:   '/' ~('\n'|'}'|'\r')* '\n'
+COMENTARIO_ERR:   '{' ~('\n'|'}'|'\r')* '\n'
 ;
 ERRO: .
 ;

@@ -2,18 +2,15 @@ package br.ufscar.dc.compiladores;
 
 import br.ufscar.dc.compiladores.questParser.ProgramaContext;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-import org.antlr.runtime.Token;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
-import org.antlr.v4.runtime.misc.ParseCancellationException;
+
 
 public class App {
     public static void main(String[] args) throws IOException {
@@ -32,7 +29,7 @@ public class App {
         parser.addErrorListener(pegaErro);
 
 
-        // erro semantico
+        //Erro semantico
         ProgramaContext arvore = parser.programa();
         Semantico as = new Semantico();
         as.visitPrograma(arvore);

@@ -1,7 +1,5 @@
 package br.ufscar.dc.compiladores;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import static java.lang.System.exit;
@@ -64,7 +62,8 @@ public class Tratamento_erros implements ANTLRErrorListener {
             outputFile.append("Fim da compilacao\n");
             outputFile.close();
             exit(0);
-        }                    
+        }    
+                        
         else if (t.getType() != Token.EOF) {
             outputFile.append("Linha " + t.getLine() + ": ");
             outputFile.append("Erro sintático próximo à " + t.getText()  +"\n");
