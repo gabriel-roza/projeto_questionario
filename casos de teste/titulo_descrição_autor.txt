@@ -1,5 +1,5 @@
 inicio_declaracoes
-	/título descrição e autor são campos obrigatórios */
+	{ título descrição e autor são campos obrigatórios }
 	titulo: ""
 	descricao: ""
 	autor: ""

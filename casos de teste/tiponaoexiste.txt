@@ -1,0 +1,33 @@
+inicio_declaracoes
+	titulo: "Meu título"
+	descricao: "Minha descrição"
+	autor: "Fulano de Tal"
+fim_declaracoes
+
+inicio_form
+	inicio_pergunta
+		tipo: multiplaescolha		
+		pergunta: "Minha pergunta"
+		alternativas: "alternativa a", "alternativa b", "alternativa c"
+		resposta: "alternativa c"
+	fim_pergunta
+
+	{ o tipo não existe }
+	inicio_pergunta
+		tipo: assinalar
+		pergunta: "Esse tipo existe?"
+		alternativas: "sim", "não"
+		resposta: "não"
+	fim_pergunta
+	
+	inicio_pergunta
+		tipo: verdadeirofalso
+		pergunta: "Minha pergunta"
+		resposta: verdadeiro
+	fim_pergunta
+	
+	inicio_pergunta
+		tipo: dissertativa
+		pergunta: "Minha pergunta com menos de 300 caracteres"
+	fim_pergunta
+fim_form
