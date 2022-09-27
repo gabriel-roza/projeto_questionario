@@ -12,7 +12,6 @@ public class Semantico extends questBaseVisitor<Void>{
 
     @Override
     public Void visitPrograma(questParser.ProgramaContext ctx) {
-        System.out.println("criei"); 
         return super.visitPrograma(ctx);
     }
 

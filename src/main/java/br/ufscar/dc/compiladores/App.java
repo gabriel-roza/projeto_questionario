@@ -31,12 +31,11 @@ public class App {
         Tratamento_erros pegaErro = new Tratamento_erros(pw);
         parser.addErrorListener(pegaErro);
 
+
         // erro semantico
         ProgramaContext arvore = parser.programa();
         Semantico as = new Semantico();
         as.visitPrograma(arvore);
-
-        //SemanticoUtils.errosSemanticos.forEach((erro) -> pw.println(erro));
 
         if(SemanticoUtils.errosSemanticos.isEmpty()==false){
             //Escrevendo os erros gravados no LASemanticoUtils para um arquivo
@@ -45,15 +44,18 @@ public class App {
                 pw.append(erroSemantico + "\n");
             }   
 
-            pw.append("Fim da compilacao\n");               
+            pw.append("Fim da compilacao\n");  
+            pw.close();             
         }
-        
-        GeradorHTML lac = new GeradorHTML();
-        lac.visitPrograma(arvore);
-        try (PrintWriter pwc = new PrintWriter(args[1])) {
-            pwc.println(lac.out.toString());
+        else{
+            GeradorHTML lac = new GeradorHTML();
+            lac.visitPrograma(arvore);
+            try (PrintWriter pwc = new PrintWriter(args[1])) {
+                pwc.println(lac.out.toString());
+            }    
         }
-        
-            
+
+        parser.programa();
+
     }
 }

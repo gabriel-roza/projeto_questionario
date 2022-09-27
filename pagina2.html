@@ -1,3 +1,83 @@
+<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+html * {
+    font-family: 'Inter', sans-serif !important;
+}
+h1 {
+    margin: 10px;
+    text-align: center;
+}
+button {
+    background-color: #45A159;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+   display: inline-block;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #5DAC6E;
+    color: white;
+}
+.class_questions {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.class_titleQuestion {
+    font-size: 20px;
+    font-weight: bold;
+}
+#id_description {
+    text-align: center;
+    color: #808080;
+    margin-bottom: 100px;
+}</style>
+
 <!DOCTYPE html>
-<html>
+    <html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<title>"1"</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+<h1>
+"1" - "Vozes na minha cabeça"</h1>
+<p id='id_description'>
+"A descrição"</p>
+
+<div class='class_questions'>
+<form action='/submit.php' method='get' id='form_quiz'>
+
+
+<p class='class_titleQuestion'>1."pergunta"</p>
+<input type='radio' name='question_1' value='option_0' checked>"a"<br>
+<input type='radio' name='question_1' value='option_1' checked>"b"<br>
+<input type='radio' name='question_1' value='option_2' checked>"c"<br>
+
+<p class='class_titleQuestion'>2."pergunta"</p>
+<input type='radio' name='question_2' value='option_1' checked>Verdadeiro<br>
+<input type='radio' name='question_2' value='option_1' checked>Falso<br>
+
+
+<p class='class_titleQuestion'>3."pergunta"</p>
+<input type='radio' name='question_3' value='option_0' checked>"a"<br>
+<input type='radio' name='question_3' value='option_1' checked>"b"<br>
+<input type='radio' name='question_3' value='option_2' checked>"c"<br>
+
+<p class='class_titleQuestion'>4."aaaaaaaaaaaaaaaaaaaaaadsadfafasffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff  ddddddddddddddddddddddssssssssssssssscccccc "</p>
+<p>Digite sua resposta</p>
+<input type='text' name='question_4' size='60' />
+
+
+</form>
+<br><br><br>
+<button type='submit' form='form_quiz' value='Submit'>Enviar</button>
+</div>
+</body>
+</html>
 
