@@ -108,9 +108,9 @@ public class GeradorHTML extends questBaseVisitor<Void>{
 
     @Override
     public Void visitDeclaracoes(DeclaracoesContext ctx) {
-        String titulo = ctx.titulo().getText();
-        String descricao = ctx.descricao().getText();
-        String autor = ctx.autor().getText();
+        String titulo = (ctx.titulo().getText()).replaceAll("^\"|\"$", "");
+        String descricao = (ctx.descricao().getText()).replaceAll("^\"|\"$", "");
+        String autor = (ctx.autor().getText()).replaceAll("^\"|\"$", "");
 
         out.append("   <title>"+titulo+"</title>\n"
         +"  <meta name='viewport' content='width=device-width, initial-scale=1'>\n"
@@ -132,12 +132,12 @@ public class GeradorHTML extends questBaseVisitor<Void>{
     public Void visitMultiplaescolha(MultiplaescolhaContext ctx) {
         numPergunta = numPergunta + 1;
 
-        String perg = ctx.pergunta().getText();
+        String perg = (ctx.pergunta().getText()).replaceAll("^\"|\"$", "");
         out.append("\n  <p class='class_titleQuestion'>"+numPergunta+"."+perg+"</p>\n");
 
         String alt;
         for(int i=0;i<ctx.alternativa().size();i++){
-            alt = ctx.alternativa(i).getText();
+            alt = (ctx.alternativa(i).getText()).replaceAll("^\"|\"$", "");
             out.append("        <input type='radio' name='question_"+numPergunta+"' value='option_"+i+"' checked>"+alt+"<br>\n");
         }
 
@@ -148,7 +148,7 @@ public class GeradorHTML extends questBaseVisitor<Void>{
     public Void visitDissertativa(DissertativaContext ctx) {
         numPergunta = numPergunta + 1;
 
-        String perg = ctx.pergunta().getText();
+        String perg = (ctx.pergunta().getText()).replaceAll("^\"|\"$", "");
 
         out.append("\n  <p class='class_titleQuestion'>"+numPergunta+"."+perg+"</p>\n"
         +"  <p>Digite sua resposta</p>\n"
@@ -161,7 +161,7 @@ public class GeradorHTML extends questBaseVisitor<Void>{
     public Void visitVerdadeirofalso(VerdadeirofalsoContext ctx) {
         numPergunta = numPergunta + 1;
         
-        String perg = ctx.pergunta().getText();
+        String perg = (ctx.pergunta().getText()).replaceAll("^\"|\"$", "");
         out.append("\n  <p class='class_titleQuestion'>"+numPergunta+"."+perg+"</p>\n");
         out.append("        <input type='radio' name='question_"+numPergunta+"' value='option_1' checked>Verdadeiro<br>\n");
         out.append("        <input type='radio' name='question_"+numPergunta+"' value='option_1' checked>Falso<br>\n\n");
