@@ -47,3 +47,8 @@ fim_form
 ## Vídeo descritivo
 
 ## Como compilar
+O projeto foi realizado no Visual Studio Code, e para seu funcionamento é preciso que o ambiente possua Java 1.8+ e Maven 3.6.2+ .
+O comando para a execução em um compilador pode ser visto logo abaixo:
+```
+java -jar 'home/caminho/projeto_questionario/target/quest-1.0-SNAPSHOT-jar-with-dependencies.jar' exemplodeclaração.txt pagina.html
+```
