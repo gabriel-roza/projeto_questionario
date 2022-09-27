@@ -28,26 +28,6 @@ public interface questListener extends ParseTreeListener {
 	 */
 	void exitDeclaracoes(questParser.DeclaracoesContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link questParser#decl}.
-	 * @param ctx the parse tree
-	 */
-	void enterDecl(questParser.DeclContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link questParser#decl}.
-	 * @param ctx the parse tree
-	 */
-	void exitDecl(questParser.DeclContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link questParser#tipo}.
-	 * @param ctx the parse tree
-	 */
-	void enterTipo(questParser.TipoContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link questParser#tipo}.
-	 * @param ctx the parse tree
-	 */
-	void exitTipo(questParser.TipoContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link questParser#perguntas}.
 	 * @param ctx the parse tree
 	 */
@@ -68,25 +48,55 @@ public interface questListener extends ParseTreeListener {
 	 */
 	void exitDeclaracoes_perguntas(questParser.Declaracoes_perguntasContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link questParser#decl_perguntas}.
+	 * Enter a parse tree produced by {@link questParser#multiplaescolha}.
 	 * @param ctx the parse tree
 	 */
-	void enterDecl_perguntas(questParser.Decl_perguntasContext ctx);
+	void enterMultiplaescolha(questParser.MultiplaescolhaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link questParser#decl_perguntas}.
+	 * Exit a parse tree produced by {@link questParser#multiplaescolha}.
 	 * @param ctx the parse tree
 	 */
-	void exitDecl_perguntas(questParser.Decl_perguntasContext ctx);
+	void exitMultiplaescolha(questParser.MultiplaescolhaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link questParser#tipo_perguntas}.
+	 * Enter a parse tree produced by {@link questParser#dissertativa}.
 	 * @param ctx the parse tree
 	 */
-	void enterTipo_perguntas(questParser.Tipo_perguntasContext ctx);
+	void enterDissertativa(questParser.DissertativaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link questParser#tipo_perguntas}.
+	 * Exit a parse tree produced by {@link questParser#dissertativa}.
 	 * @param ctx the parse tree
 	 */
-	void exitTipo_perguntas(questParser.Tipo_perguntasContext ctx);
+	void exitDissertativa(questParser.DissertativaContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link questParser#titulo}.
+	 * @param ctx the parse tree
+	 */
+	void enterTitulo(questParser.TituloContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link questParser#titulo}.
+	 * @param ctx the parse tree
+	 */
+	void exitTitulo(questParser.TituloContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link questParser#descricao}.
+	 * @param ctx the parse tree
+	 */
+	void enterDescricao(questParser.DescricaoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link questParser#descricao}.
+	 * @param ctx the parse tree
+	 */
+	void exitDescricao(questParser.DescricaoContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link questParser#autor}.
+	 * @param ctx the parse tree
+	 */
+	void enterAutor(questParser.AutorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link questParser#autor}.
+	 * @param ctx the parse tree
+	 */
+	void exitAutor(questParser.AutorContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link questParser#alternativa}.
 	 * @param ctx the parse tree
@@ -98,23 +108,23 @@ public interface questListener extends ParseTreeListener {
 	 */
 	void exitAlternativa(questParser.AlternativaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link questParser#alternativas}.
+	 * Enter a parse tree produced by {@link questParser#pergunta}.
 	 * @param ctx the parse tree
 	 */
-	void enterAlternativas(questParser.AlternativasContext ctx);
+	void enterPergunta(questParser.PerguntaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link questParser#alternativas}.
+	 * Exit a parse tree produced by {@link questParser#pergunta}.
 	 * @param ctx the parse tree
 	 */
-	void exitAlternativas(questParser.AlternativasContext ctx);
+	void exitPergunta(questParser.PerguntaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link questParser#declaracoes_alternativas}.
+	 * Enter a parse tree produced by {@link questParser#resposta}.
 	 * @param ctx the parse tree
 	 */
-	void enterDeclaracoes_alternativas(questParser.Declaracoes_alternativasContext ctx);
+	void enterResposta(questParser.RespostaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link questParser#declaracoes_alternativas}.
+	 * Exit a parse tree produced by {@link questParser#resposta}.
 	 * @param ctx the parse tree
 	 */
-	void exitDeclaracoes_alternativas(questParser.Declaracoes_alternativasContext ctx);
+	void exitResposta(questParser.RespostaContext ctx);
 }

@@ -1,5 +1,10 @@
 /home/gabriel/Área de Trabalho/projeto_questionario/target/generated-sources/antlr4/br/ufscar/dc/compiladores/questBaseListener.java
+/home/gabriel/Área de Trabalho/projeto_questionario/src/main/java/br/ufscar/dc/compiladores/Tratamento_erros.java
 /home/gabriel/Área de Trabalho/projeto_questionario/target/generated-sources/antlr4/br/ufscar/dc/compiladores/questLexer.java
+/home/gabriel/Área de Trabalho/projeto_questionario/src/main/java/br/ufscar/dc/compiladores/TabelaDeSimbolos.java
+/home/gabriel/Área de Trabalho/projeto_questionario/target/generated-sources/antlr4/br/ufscar/dc/compiladores/questVisitor.java
+/home/gabriel/Área de Trabalho/projeto_questionario/target/generated-sources/antlr4/br/ufscar/dc/compiladores/questBaseVisitor.java
+/home/gabriel/Área de Trabalho/projeto_questionario/src/main/java/br/ufscar/dc/compiladores/Semantico.java
 /home/gabriel/Área de Trabalho/projeto_questionario/src/main/java/br/ufscar/dc/compiladores/App.java
 /home/gabriel/Área de Trabalho/projeto_questionario/target/generated-sources/antlr4/br/ufscar/dc/compiladores/questParser.java
 /home/gabriel/Área de Trabalho/projeto_questionario/target/generated-sources/antlr4/br/ufscar/dc/compiladores/questListener.java

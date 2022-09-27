@@ -1,6 +1,6 @@
 grammar quest;
 
-PALAVRA_CHAVE : 'inicio_form' | 'fim_form' | 'inicio_pergunta' | 'fim_pergunta' | 'titulo' | 'descricao'
+PALAVRA_CHAVE : 'inicio_form' | 'fim_form' | 'inicio_pergunta' | 'fim_pergunta' | 'titulo' | 'descricao' | 'autor' | 'inicio_declaracoes' | 'fim_declaracoes' | 'pergunta' | 'alternativas' | 'resposta' | 'tipo'
 ;
 IDENT: ('a'..'z'|'A'..'Z') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')* | ('a'..'z')
 ;
@@ -31,35 +31,62 @@ COMENTARIO_ERR:   '/' ~('\n'|'}'|'\r')* '\n'
 ERRO: .
 ;
 
-programa: declaracoes 'inicio_form' perguntas 'fim_form' EOF
+programa: declaracoes 'inicio_form' (perguntas)* 'fim_form' EOF
 ;
 
-declaracoes: decl*
+declaracoes: 
+        'inicio_declaracoes'
+                'titulo' ':' titulo
+                'descricao' ':' descricao
+                'autor' ':' autor
+        'fim_declaracoes'
 ;
 
-decl: tipo ': ' CADEIA
+perguntas: 
+        'inicio_pergunta'
+                declaracoes_perguntas 
+        'fim_pergunta'
 ;
 
-tipo: 'titulo' | 'descricao' | 'autor'
+declaracoes_perguntas:
+        'tipo' '=' 'multiplaescolha' 
+        multiplaescolha 
+        |
+        'tipo' '=' 'dissertativa'
+        dissertativa
 ;
 
-perguntas: 'inicio_pergunta' declaracoes_perguntas 'fim_pergunta'
+multiplaescolha: 		
+        'pergunta'':' pergunta
+        'alternativas'':' alternativa (',' alternativa)*
+        'resposta'':' alternativa
 ;
 
-declaracoes_perguntas: decl_perguntas*
+dissertativa: 		
+        'pergunta'':' pergunta
 ;
 
-decl_perguntas: tipo_perguntas ':' CADEIA
+titulo:
+        CADEIA
 ;
 
-tipo_perguntas: 'pergunta' | declaracoes_alternativas | 'resposta'
+descricao:
+        CADEIA
 ;
 
-alternativa: CADEIA
+autor:
+        CADEIA
 ;
 
-alternativas: alternativa (',' alternativa)* '\n'
+alternativa:
+        CADEIA | NUM_INT | NUM_REAL
 ;
 
-declaracoes_alternativas: 'alternativas' ':' alternativas
+pergunta:
+        CADEIA
 ;
+
+resposta:
+        CADEIA | NUM_INT | NUM_REAL
+;
+

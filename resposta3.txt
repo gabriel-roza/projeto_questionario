@@ -1,75 +1,39 @@
+<'inicio_declaracoes','inicio_declaracoes'>
 <'titulo','titulo'>
-<': ',': '>
+<':',':'>
 <'"O título"',CADEIA>
-<'
-','\n'>
 <'descricao','descricao'>
-<': ',': '>
+<':',':'>
 <'"A descrição"',CADEIA>
-<'
-','\n'>
 <'autor','autor'>
-<': ',': '>
+<':',':'>
 <'"Vozes na minha cabeça"',CADEIA>
-<'
-','\n'>
-<'
-','\n'>
+<'fim_declaracoes','fim_declaracoes'>
 <'inicio_form','inicio_form'>
-<'
-','\n'>
 <'inicio_pergunta','inicio_pergunta'>
-<'
-','\n'>
+<'tipo','tipo'>
+<':',':'>
+<'multiplaescolha','multiplaescolha'>
 <'pergunta','pergunta'>
-<': ',': '>
+<':',':'>
 <'"pergunta"',CADEIA>
-<'
-','\n'>
 <'alternativas','alternativas'>
-<': ',': '>
+<':',':'>
 <'"a"',CADEIA>
 <',',','>
 <'"b"',CADEIA>
 <',',','>
 <'"c"',CADEIA>
-<'
-','\n'>
 <'resposta','resposta'>
-<': ',': '>
+<':',':'>
 <'"aa"',CADEIA>
-<'
-','\n'>
 <'fim_pergunta','fim_pergunta'>
-<'
-','\n'>
-<'
-','\n'>
 <'inicio_pergunta','inicio_pergunta'>
-<'
-','\n'>
+<'tipo','tipo'>
+<':',':'>
+<'dissertativa','dissertativa'>
 <'pergunta','pergunta'>
-<': ',': '>
+<':',':'>
 <'"pergunta"',CADEIA>
-<'
-','\n'>
-<'alternativas','alternativas'>
-<': ',': '>
-<'"a"',CADEIA>
-<',',','>
-<'"b"',CADEIA>
-<',',','>
-<'"c"',CADEIA>
-<'
-','\n'>
-<'resposta','resposta'>
-<': ',': '>
-<'"aa"',CADEIA>
-<'
-','\n'>
 <'fim_pergunta','fim_pergunta'>
-<'
-','\n'>
 <'fim_form','fim_form'>
-<'
-','\n'>

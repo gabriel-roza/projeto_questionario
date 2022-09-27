@@ -1,17 +1,19 @@
-titulo: "O título"
-descricao: "A descrição"
-autor: "Vozes na minha cabeça"
+inicio_declaracoes
+	titulo: "O título"
+	descricao: "A descrição"
+	autor: "Vozes na minha cabeça"
+fim_declaracoes
 
 inicio_form
-	inicio_pergunta		
+	inicio_pergunta
+		tipo: multiplaescolha		
 		pergunta: "pergunta"
 		alternativas: "a", "b", "c"
 		resposta: "aa"
 	fim_pergunta
 	
 	inicio_pergunta
+		tipo: dissertativa
 		pergunta: "pergunta"
-		alternativas: "a", "b", "c"
-		resposta: "aa"
 	fim_pergunta
 fim_form

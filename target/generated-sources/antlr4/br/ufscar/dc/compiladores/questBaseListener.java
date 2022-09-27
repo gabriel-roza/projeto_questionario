@@ -40,30 +40,6 @@ public class questBaseListener implements questListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDecl(questParser.DeclContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitDecl(questParser.DeclContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterTipo(questParser.TipoContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitTipo(questParser.TipoContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterPerguntas(questParser.PerguntasContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -88,25 +64,61 @@ public class questBaseListener implements questListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDecl_perguntas(questParser.Decl_perguntasContext ctx) { }
+	@Override public void enterMultiplaescolha(questParser.MultiplaescolhaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDecl_perguntas(questParser.Decl_perguntasContext ctx) { }
+	@Override public void exitMultiplaescolha(questParser.MultiplaescolhaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTipo_perguntas(questParser.Tipo_perguntasContext ctx) { }
+	@Override public void enterDissertativa(questParser.DissertativaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTipo_perguntas(questParser.Tipo_perguntasContext ctx) { }
+	@Override public void exitDissertativa(questParser.DissertativaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTitulo(questParser.TituloContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTitulo(questParser.TituloContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDescricao(questParser.DescricaoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDescricao(questParser.DescricaoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAutor(questParser.AutorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAutor(questParser.AutorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -124,25 +136,25 @@ public class questBaseListener implements questListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAlternativas(questParser.AlternativasContext ctx) { }
+	@Override public void enterPergunta(questParser.PerguntaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAlternativas(questParser.AlternativasContext ctx) { }
+	@Override public void exitPergunta(questParser.PerguntaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDeclaracoes_alternativas(questParser.Declaracoes_alternativasContext ctx) { }
+	@Override public void enterResposta(questParser.RespostaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDeclaracoes_alternativas(questParser.Declaracoes_alternativasContext ctx) { }
+	@Override public void exitResposta(questParser.RespostaContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

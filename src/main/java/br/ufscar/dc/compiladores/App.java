@@ -22,19 +22,19 @@ public class App {
 
             Token t = null;
             while ((t = lex.nextToken()).getType() != Token.EOF) {
-                if(t.getType() == 22)
+                if(t.getType() == 27)
                 {
                     resultado += "Linha " + t.getLine() +": " + t.getText() + " - simbolo nao identificado";
                     resultado += System.lineSeparator();
                     break;
                 }
-                else if(t.getType() == 21)
+                else if(t.getType() == 26)
                 {
                     resultado += "Linha " + t.getLine() +": " + "comentario nao fechado";
                     resultado += System.lineSeparator();
                     break;
                 }
-                else if(t.getType() == 20)
+                else if(t.getType() == 25)
                 {
                     resultado += "Linha " + t.getLine() +": " + "cadeia literal nao fechada";
                     resultado += System.lineSeparator();
