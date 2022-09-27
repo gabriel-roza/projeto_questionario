@@ -49,11 +49,15 @@ perguntas:
 ;
 
 declaracoes_perguntas:
-        'tipo' '=' 'multiplaescolha' 
+        'tipo' ':' tipo 
         multiplaescolha 
         |
-        'tipo' '=' 'dissertativa'
+        'tipo' ':' tipo
         dissertativa
+;
+
+tipo:
+        'dissertativa' | 'multiplaescolha'
 ;
 
 multiplaescolha: 		

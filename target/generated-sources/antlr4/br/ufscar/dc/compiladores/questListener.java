@@ -48,6 +48,16 @@ public interface questListener extends ParseTreeListener {
 	 */
 	void exitDeclaracoes_perguntas(questParser.Declaracoes_perguntasContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link questParser#tipo}.
+	 * @param ctx the parse tree
+	 */
+	void enterTipo(questParser.TipoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link questParser#tipo}.
+	 * @param ctx the parse tree
+	 */
+	void exitTipo(questParser.TipoContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link questParser#multiplaescolha}.
 	 * @param ctx the parse tree
 	 */

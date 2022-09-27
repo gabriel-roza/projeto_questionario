@@ -35,6 +35,12 @@ public interface questVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitDeclaracoes_perguntas(questParser.Declaracoes_perguntasContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link questParser#tipo}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTipo(questParser.TipoContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link questParser#multiplaescolha}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
